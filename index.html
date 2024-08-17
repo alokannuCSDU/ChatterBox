@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatterbox</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <section class="gossiping">
+    <div class="brand">
+      <img height="30" width="30" src="/front.png" alt="ChatterBox Logo">
+      <h1>ChatterBox</h1>
+    </div>
+    <div class="message__area"></div>
+    <div class="input_area">
+      <textarea id="textarea" cols="30" rows="1" placeholder="Write a message"></textarea>
+      <img id="sendButton" src="/send-icon.png" alt="Send Message" class="send-logo">
+    </div>
+  </section>
+    
+  <script src="/socket.io/socket.io.js"></script>
+<script src="/client.js"></Script>
+</body>
+</html>

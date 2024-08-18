@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
     display: flex;
     align-items: center;
@@ -13,13 +12,12 @@ body {
     min-height: 100vh;
     background: url('https://www.transparenttextures.com/patterns/asfalt-light.png'), linear-gradient(135deg, #2c3e50, #3498db);
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: #000000;
 }
-
 section.gossiping {
     width: 400px;
     max-width: 100%;
-    background: #f5f5f5;
+    background: #d53535;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -27,7 +25,6 @@ section.gossiping {
     display: flex;
     flex-direction: column;
 }
-
 .brand {
     padding: 15px;
     background: #075E54;
@@ -36,11 +33,9 @@ section.gossiping {
     color: #fff;
     border-bottom: 1px solid #ddd;
 }
-
 .brand img {
     margin-right: 10px;
 }
-
 .brand h1 {
     text-transform: uppercase;
     font-size: 20px;
@@ -48,18 +43,16 @@ section.gossiping {
     letter-spacing: 1px;
     margin: 0;
 }
-
 .message__area {
-    height: 500px;
-    padding: 15px;
+    height: 400px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    background: #eaeaea;
+    background: #b9eb03;
     scrollbar-width: thin;
     scrollbar-color: #075E54 #ddd;
 }
-
 .message__area::-webkit-scrollbar {
     width: 6px;
 }
@@ -73,14 +66,12 @@ section.gossiping {
     background-color: #ddd;
     border-radius: 10px;
 }
-
 .input_area {
     display: flex;
     align-items: center;
     border-top: 1px solid #ddd;
     background: #fff;
 }
-
 textarea {
     width: calc(100% - 50px); /* Adjusted width to fit the send logo */
     border: none;
@@ -88,29 +79,67 @@ textarea {
     font-size: 16px;
     outline: none;
     resize: none;
-    transition: background 0.3s ease-in-out;
+    /* transition: background 0.3s ease-in-out; */
 }
-
 textarea:focus {
     background: #f1f1f1;
 }
-
-.send-logo {
-    width: 40px;
+.send-logo,
+.emoji-logo {
+    width: 40px; 
+    height: 40px; 
     cursor: pointer;
     padding: 10px;
     transition: transform 0.2s;
 }
 
-.send-logo:hover {
+.send-logo:hover,
+.emoji-logo:hover {
     transform: scale(1.1);
 }
 
+.emoji-picker {
+    position: absolute;
+    bottom: 50px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.emoji {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.emoji:hover {
+    background: #f1f1f1;
+}
+
+.emoji-picker {
+    position: absolute;
+    bottom: 50px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.emoji {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 20px;
+}
+.emoji:hover {
+    background: #f1f1f1;
+}
+
 .message {
-    padding: 10px 15px;
+    padding: 10px 10px;
     border-radius: 8px;
-    margin-bottom: 10px;
-    max-width: 80%;
+    margin-bottom: 1px;
+    max-width: 70%;
     position: relative;
     font-size: 14px;
     line-height: 1.4;
@@ -119,36 +148,30 @@ textarea:focus {
     animation: slideUp 0.4s ease-in-out;
     overflow-wrap: break-word;
 }
-
 .incoming {
     background: #dcf8c6;
     align-self: flex-start;
     border-top-left-radius: 0;
 }
-
 .outgoing {
     background: #34B7F1;
     color: #fff;
     align-self: flex-end;
     border-top-right-radius: 0;
 }
-
 .message h4 {
     font-size: 12px;
     font-weight: 700;
     color: #555;
     margin-bottom: 5px;
 }
-
 .message p {
     margin: 0;
 }
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes slideUp {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }

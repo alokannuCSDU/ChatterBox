@@ -15,10 +15,18 @@
     <div class="message__area"></div>
     <div class="input_area">
       <textarea id="textarea" cols="30" rows="1" placeholder="Write a message"></textarea>
+      <img id="emojiButton" src="/emoji-icon.png" alt="Emoji" class="emoji-logo">
+      <div id="emojiPicker" class="emoji-picker" style="display: none;">
+          <span class="emoji" data-emoji="😊">😊</span>
+          <span class="emoji" data-emoji="😂">😂</span>
+          <span class="emoji" data-emoji="😍">😍</span>
+          <!-- Add more emojis as needed -->
+      </div>
       <img id="sendButton" src="/send-icon.png" alt="Send Message" class="send-logo">
-    </div>
+  </div>
+  
   </section>
-    
+
   <script src="/socket.io/socket.io.js"></script>
 <script src="/client.js"></Script>
 </body>
